@@ -15,5 +15,14 @@ namespace SystemInfoCollector
         {
             InitializeComponent();
         }
+
+        private void Category_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string nodeKey = e.Node.Name;
+            if (!string.IsNullOrEmpty(nodeKey))
+            {
+                MessageBox.Show("선택된 노드 키 : " + nodeKey);
+            }
+        }
     }
 }
